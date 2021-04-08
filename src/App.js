@@ -58,7 +58,7 @@ class App extends React.Component {
     console.log(this.state.drumpadData);
     if (this.state.drumpadData.hasOwnProperty(event.keyCode)) {
       const sound = document.getElementById(
-        `${this.state.drumpadData[event.keyCode]["name"]}`
+        `audio-${this.state.drumpadData[event.keyCode]["name"]}`
       );
       sound.play();
     }

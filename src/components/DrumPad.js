@@ -20,7 +20,9 @@ class DrumPad extends React.Component {
   }
 
   playSound() {
-    const sound = document.getElementById(`${this.props.keyData["name"]}`);
+    const sound = document.getElementById(
+      `audio-${this.props.keyData["name"]}`
+    );
     sound.play();
   }
 
@@ -42,19 +44,14 @@ class DrumPad extends React.Component {
   render() {
     return (
       <div
-        id={`drum-pad-${this.props.keyData["name"]}`}
-        className="drum-pad"
-        onKeyDown={this.handleKeyDown}
+        id={`${this.props.keyData["name"]}`}
+        className="drum-pad d-flex justify-content-center align-items-center"
+        onClick={this.playSound}
       >
-        <audio id={`${this.props.keyData["name"]}`} className="clip">
+        <audio id={`audio-${this.props.keyData["name"]}`} className="clip">
           <source src={this.props.keyData["sound"]} type="audio/mp3"></source>
         </audio>
-        <button
-          className="drum-pad btn btn-outline-light"
-          onClick={this.playSound}
-        >
-          {this.props.keyData["name"]}
-        </button>
+        {this.props.keyData["name"]}
       </div>
     );
   }
