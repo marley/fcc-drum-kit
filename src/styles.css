@@ -12,20 +12,20 @@
   border-radius: 5%;
 }
 
-#A:active,
-#C:active,
-#D:active {
+#A:hover,
+#C:hover,
+#D:hover {
   background-color: var(--bs-blue);
 }
 
-#E:active,
-#Q:active,
-#S:active {
+#E:hover,
+#Q:hover,
+#S:hover {
   background-color: var(--bs-purple);
 }
 
-#W:active,
-#X:active,
-#Z:active {
+#W:hover,
+#X:hover,
+#Z:hover {
   background-color: var(--bs-green);
 }
