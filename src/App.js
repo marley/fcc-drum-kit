@@ -1,58 +1,85 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import { Counter } from "./features/counter/Counter";
+import DrumPads from "./components/DrumPads";
+import Display from "./components/Display";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      drumpadData: {
+        81: {
+          name: "Q",
+          sound:
+            "https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3",
+        },
+        87: {
+          name: "W",
+          sound: "https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3",
+        },
+        69: {
+          name: "E",
+          sound: "https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3",
+        },
+        65: {
+          name: "A",
+          sound: "https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3",
+        },
+        83: {
+          name: "S",
+          sound: "https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3",
+        },
+        68: {
+          name: "D",
+          sound: "https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3",
+        },
+        90: {
+          name: "Z",
+          sound: "https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3",
+        },
+        88: {
+          name: "X",
+          sound: "https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3",
+        },
+        67: {
+          name: "C",
+          sound: "https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3",
+        },
+      },
+    };
+    this.handleKeyDown = this.handleKeyDown.bind(this);
+  }
+
+  handleKeyDown(event) {
+    console.log(`keydown ${event.keyCode}`);
+    let idx = -1;
+    console.log(this.state.drumpadData);
+    if (this.state.drumpadData.hasOwnProperty(event.keyCode)) {
+      const sound = document.getElementById(
+        `${this.state.drumpadData[event.keyCode]["name"]}`
+      );
+      sound.play();
+    }
+  }
+
+  componentDidMount() {
+    document.addEventListener("keydown", this.handleKeyDown);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.handleKeyDown);
+  }
+
+  render() {
+    return (
+      <div id="drum-machine" onKeyDown={this.handleKeyDown}>
+        <DrumPads data={this.state.drumpadData} />
+        <Display />
+      </div>
+    );
+  }
 }
 
 export default App;
