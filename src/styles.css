@@ -2,8 +2,8 @@
   display: grid;
   grid-gap: 20px 15px;
   grid-template-columns: repeat(3, 1fr);
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
 }
 
 .drum-pad {
@@ -12,20 +12,29 @@
   border-radius: 5%;
 }
 
-#A:hover,
-#C:hover,
-#D:hover {
+#drum-A:hover,
+#drum-C:hover,
+#drum-D:hover {
   background-color: var(--bs-blue);
 }
 
-#E:hover,
-#Q:hover,
-#S:hover {
+#drum-E:hover,
+#drum-Q:hover,
+#drum-S:hover {
   background-color: var(--bs-purple);
 }
 
-#W:hover,
-#X:hover,
-#Z:hover {
+#drum-W:hover,
+#drum-X:hover,
+#drum-Z:hover {
   background-color: var(--bs-teal);
+}
+
+#display {
+  background-color: var(--bs-info);
+  border-radius: 50px;
+  height: 24px;
+  width: 30%;
+  margin: 30px;
+  text-align: center;
 }

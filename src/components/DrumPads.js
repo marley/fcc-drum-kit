@@ -13,8 +13,8 @@ class DrumPads extends React.Component {
       items.push(
         <DrumPad
           key={j}
-          refresh={this.props.refresh}
           keyData={this.props.data[keys[j]]}
+          refresh={this.props.refresh}
         />
       );
     }

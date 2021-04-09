@@ -59,7 +59,7 @@ class App extends React.Component {
     let idx = -1;
     if (this.state.drumpadData.hasOwnProperty(event.keyCode)) {
       const sound = document.getElementById(
-        `audio-${this.state.drumpadData[event.keyCode]["name"]}`
+        `${this.state.drumpadData[event.keyCode]["name"]}`
       );
       sound.play();
       this.refreshDisplay(this.state.drumpadData[event.keyCode]);
