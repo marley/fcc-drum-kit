@@ -48,21 +48,29 @@ class App extends React.Component {
           sound: "https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3",
         },
       },
+      lastPlayed: {},
     };
     this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.refreshDisplay = this.refreshDisplay.bind(this);
   }
 
   handleKeyDown(event) {
     console.log(`keydown ${event.keyCode}`);
     let idx = -1;
-    console.log(this.state.drumpadData);
     if (this.state.drumpadData.hasOwnProperty(event.keyCode)) {
       const sound = document.getElementById(
         `audio-${this.state.drumpadData[event.keyCode]["name"]}`
       );
       sound.play();
+      this.refreshDisplay(this.state.drumpadData[event.keyCode]);
     }
   }
+
+  refreshDisplay = (keyData) => {
+    this.setState({
+      lastPlayed: keyData,
+    });
+  };
 
   componentDidMount() {
     document.addEventListener("keydown", this.handleKeyDown);
@@ -75,8 +83,8 @@ class App extends React.Component {
   render() {
     return (
       <div id="drum-machine" onKeyDown={this.handleKeyDown}>
-        <DrumPads data={this.state.drumpadData} />
-        <Display />
+        <DrumPads data={this.state.drumpadData} refresh={this.refreshDisplay} />
+        <Display lastPlayed={this.state.lastPlayed} />
       </div>
     );
   }

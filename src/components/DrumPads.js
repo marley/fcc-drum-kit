@@ -10,7 +10,13 @@ class DrumPads extends React.Component {
     let items = [];
     let keys = Object.keys(this.props.data);
     for (let j = 0; j < keys.length; j++) {
-      items.push(<DrumPad key={j} keyData={this.props.data[keys[j]]} />);
+      items.push(
+        <DrumPad
+          key={j}
+          refresh={this.props.refresh}
+          keyData={this.props.data[keys[j]]}
+        />
+      );
     }
     return (
       <div id="drum-pads" className="grid">

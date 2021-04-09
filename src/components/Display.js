@@ -1,13 +1,16 @@
 import React from "react";
-// import "./Display.css";
 
-class Display extends React.Component {
-  constructor(props) {
-    super(props);
+const Display = (props) => {
+  let soundLastPlayed = "";
+  if (Object.keys(props.lastPlayed).length !== 0) {
+    console.log(props.lastPlayed);
+    soundLastPlayed = props.lastPlayed["sound"].split("/");
   }
-  render() {
-    return <div id="display">display</div>;
-  }
-}
+  return (
+    <div id="display">
+      {soundLastPlayed ? soundLastPlayed[soundLastPlayed.length - 1] : ""}
+    </div>
+  );
+};
 
 export default Display;
