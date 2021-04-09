@@ -2,10 +2,6 @@ import React from "react";
 import DrumPad from "./DrumPad";
 
 class DrumPads extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     let items = [];
     let keys = Object.keys(this.props.data);

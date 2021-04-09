@@ -1,6 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
-import { Counter } from "./features/counter/Counter";
 import DrumPads from "./components/DrumPads";
 import Display from "./components/Display";
 import "./App.css";
@@ -56,7 +54,6 @@ class App extends React.Component {
 
   handleKeyDown(event) {
     console.log(`keydown ${event.keyCode}`);
-    let idx = -1;
     if (this.state.drumpadData.hasOwnProperty(event.keyCode)) {
       const sound = document.getElementById(
         `${this.state.drumpadData[event.keyCode]["name"]}`
