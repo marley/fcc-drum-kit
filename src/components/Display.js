@@ -3,7 +3,6 @@ import React from "react";
 const Display = (props) => {
   let soundLastPlayed = "";
   if (Object.keys(props.lastPlayed).length !== 0) {
-    console.log(props.lastPlayed);
     soundLastPlayed = props.lastPlayed["sound"].split("/");
   }
   return (
