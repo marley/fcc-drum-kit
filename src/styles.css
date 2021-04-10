@@ -12,21 +12,21 @@
   border-radius: 5%;
 }
 
-#drum-A:hover,
-#drum-C:hover,
-#drum-D:hover {
+#drum-Q:hover,
+#drum-W:hover,
+#drum-E:hover {
   background-color: var(--bs-blue);
 }
 
-#drum-E:hover,
-#drum-Q:hover,
-#drum-S:hover {
+#drum-A:hover,
+#drum-S:hover,
+#drum-D:hover {
   background-color: var(--bs-purple);
 }
 
-#drum-W:hover,
+#drum-Z:hover,
 #drum-X:hover,
-#drum-Z:hover {
+#drum-C:hover {
   background-color: var(--bs-teal);
 }
 
