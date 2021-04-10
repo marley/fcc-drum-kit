@@ -55,6 +55,9 @@ class App extends React.Component {
   handleKeyDown(event) {
     console.log(`keydown ${event.keyCode}`);
     if (this.state.drumpadData.hasOwnProperty(event.keyCode)) {
+      console.log(
+        "has own property" + this.state.drumpadData[event.keyCode]["name"]
+      );
       const sound = document.getElementById(
         `${this.state.drumpadData[event.keyCode]["name"]}`
       );
