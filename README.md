@@ -8,6 +8,10 @@ fcc-drum-machine is one of my final projects as part of the FreeCodeCamp [Front 
 2. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 3. Click the hamburger menu in the upper left corner and then "Run Tests" to run the FreeCodeCamp tests.
 
+# To-Do
+
+- [ ] Improve mobile experience (currently display area is too small on mobile)
+
 # Links
 
 These are some things I learned throughout the process of creating this app:
