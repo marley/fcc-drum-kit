@@ -14,8 +14,8 @@ fcc-drum-machine is one of my final projects as part of the FreeCodeCamp [Front 
 
 # Links
 
-These are some things I learned throughout the process of creating this app:
+Some things I learned during the process of creating this app:
 
-- [Creating a fully controlled child component](https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html#recommendation-fully-controlled-component)
-- [Creating mutliple divs with a JSX for-loop](https://stackoverflow.com/questions/22876978/loop-inside-react-jsx)
-- [Publishing a react app to github pages](https://github.com/gitname/react-gh-pages)
+- [How to create a fully controlled child component](https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html#recommendation-fully-controlled-component)
+- [How to generate mutliple divs with a JSX for-loop](https://stackoverflow.com/questions/22876978/loop-inside-react-jsx)
+- [How to publish a react app to github pages](https://github.com/gitname/react-gh-pages)
