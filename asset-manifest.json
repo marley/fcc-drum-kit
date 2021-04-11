@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/fcc-drum-kit/static/css/main.c956c338.chunk.css",
+    "main.js": "/fcc-drum-kit/static/js/main.6cda5c53.chunk.js",
+    "main.js.map": "/fcc-drum-kit/static/js/main.6cda5c53.chunk.js.map",
+    "runtime-main.js": "/fcc-drum-kit/static/js/runtime-main.c5899826.js",
+    "runtime-main.js.map": "/fcc-drum-kit/static/js/runtime-main.c5899826.js.map",
+    "static/js/2.3bf2b255.chunk.js": "/fcc-drum-kit/static/js/2.3bf2b255.chunk.js",
+    "static/js/2.3bf2b255.chunk.js.map": "/fcc-drum-kit/static/js/2.3bf2b255.chunk.js.map",
+    "index.html": "/fcc-drum-kit/index.html",
+    "static/css/main.c956c338.chunk.css.map": "/fcc-drum-kit/static/css/main.c956c338.chunk.css.map",
+    "static/js/2.3bf2b255.chunk.js.LICENSE.txt": "/fcc-drum-kit/static/js/2.3bf2b255.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c5899826.js",
+    "static/js/2.3bf2b255.chunk.js",
+    "static/css/main.c956c338.chunk.css",
+    "static/js/main.6cda5c53.chunk.js"
+  ]
+}
